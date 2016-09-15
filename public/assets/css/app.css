@@ -1,0 +1,314 @@
+* { margin: 0; padding: 0; }
+
+
+				.clearfix{ display: block; height: 0; clear: both; visibility: hidden; }
+
+
+
+body{
+  color: black;
+  text-align: center;
+  font-family: Oswald, Helvetica;
+  margin: 0;
+}
+
+p{
+  font-size: 20px;
+}
+
+///
+/// Viewport sized typography with minimum and maximum values
+///
+/// @author Eduardo Boucas (@eduardoboucas)
+///
+/// @param {Number}   $responsive  - Viewport-based size
+/// @param {Number}   $min         - Minimum font size (px)
+/// @param {Number}   $max         - Maximum font size (px)
+///                                  (optional)
+/// @param {Number}   $fallback    - Fallback for viewport-
+///                                  based units (optional)
+///
+/// @example scss - 5vw font size (with 50px fallback),
+///                 minumum of 35px and maximum of 150px
+///  @include responsive-font(5vw, 35px, 150px, 50px);
+///
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+
+  @if $fallback {
+    font-size: $fallback;
+  }
+
+  font-size: $responsive;
+}
+
+.menu-foo{
+	background:#e9e8e4 url('../img/bg-grid.png');
+	border-color: #333;
+	border-style: groove;
+	border-top: 1px;
+	margin-bottom: 8px;
+}
+
+
+.menu-foo #enlaces{
+
+}
+.menu-foo span{
+	margin: 0px;
+}
+.menu-foo #descripcion{
+	align-self: flex-end;
+}
+.menu-foo a:hover{
+	font-weight: bolder;
+}
+
+.footer-text{
+		display:flex;
+		flex-flow: row wrap;
+		justify-content: center;
+}
+.no-limits {
+  font-size: 3vw;
+}
+
+.limit-min {
+  @include responsive-font(3vw, 20px);
+}
+
+.limit-min-max {
+  @include responsive-font(3vw, 20px, 50px);
+}
+
+.flex-azul{
+  display:flex;
+  flex-flow:row nowrap;
+  align-items: flex-start;
+}
+.separacion{
+  padding-top: 90px;
+}
+
+
+h1{
+  padding: 5px 10px;
+	margin: 10px;
+	background: #ff0030;
+	color: #fff;
+	font-size: 21px;
+	line-height: 1.3em;
+	border: 2px dashed #fff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-box-shadow: 0 0 0 4px #ff0030, 2px 1px 4px 4px rgba(10,10,0,.5);
+	-webkit-box-shadow: 0 0 0 4px #ff0030, 2px 1px 4px 4px rgba(10,10,0,.5);
+	box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10,10,0,.5);
+	text-shadow: -1px -1px #aa3030;
+}
+
+.separacion-font{
+
+  filter: grayscale(23%);
+ -webkit-filter: grayscale(23%);
+ -moz-filter: grayscale(23%);
+ -ms-filter: grayscale(23%);
+ -o-filter: grayscale(23%);
+  padding-bottom: 90px;
+  padding-top: 90px;
+}
+
+
+.cuadros{
+  align-content: space-around;
+}
+.cuadros-up{
+  align-self: flex-start;
+
+}
+.cuadros-center{
+  align-self: center;
+
+}
+.cuadros-bot{
+  align-self: flex-end;
+}
+
+.form-cuadros{
+  justify-content: space-around;
+  display:flex;
+  flex-flow:row wrap;
+  align-content:center;
+  align-items: center;
+}
+
+.cuadro{
+  display:flex;
+  flex-flow:column wrap;
+  align-items: center;
+  margin:0 auto;
+  max-width: 250px;
+}
+
+.form-relleno{
+  display:flex;
+  flex-flow:row wrap;
+  align-items: flex-start;
+  color:white;
+}
+.form-text{
+  display:flex;
+  flex-flow:row nowrap;
+  align-items: flex-start;
+  color:black;
+}
+
+.flex-blanco{
+  display:flex;
+  flex-flow:column nowrap;
+  align-items: center;
+  color:red;
+}
+
+.flex-gris{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  color:white;
+}
+
+.responsive-image{
+background-size: 100% 100%;
+max-width: 480px;
+width: 100%;
+}
+
+/* Retina display */
+@media screen and (min-width: 1024px){
+    .responsive-image{
+
+        /*background-image: url('../img/retina.jpg');*/
+    }
+}
+/* Desktop */
+@media screen and (min-width: 980px) and (max-width: 1024px){
+    .responsive-image{
+      /*  background-image: url('../img/desktop.jpg');*/
+    }
+}
+/* Tablet */
+@media screen and (min-width: 760px) and (max-width: 980px){
+    .responsive-image{
+        /*background-image: url('../img/tablet.jpg');*/
+    }
+}
+/* Mobile HD */
+@media screen and (min-width: 350px) and (max-width: 760px){
+    .responsive-image{
+      /*  background-image: url('../img/mobile-hd.jpg');*/
+    }
+}
+/* Mobile LD */
+@media screen and (max-width: 350px){
+    .responsive-image{
+      /*  background-image: url('../img/mobile-ld.jpg');*/
+    }
+}
+
+
+.naranja{
+  background-color: #FFa335;
+}
+
+.envio{
+   margin:0px auto; padding: 12px; background: white; -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black;
+}
+
+.rojo{
+  background-color: red;
+}
+
+.azul{
+  background-color: #4A89D0;
+}
+
+.gris{
+  background-color: #E3E3E3;
+}
+
+.blanco{
+  background-color: white;
+}
+
+.negro{
+  color:white;
+  font-weight: bold;
+	background-color: #333;
+}
+
+.box{
+  margin:0.4em 0;
+  border: 5px inerith;
+}
+
+/*@media screen and (min-width: 18.750em){ */
+
+.box--auto{
+height: auto;
+}
+.box--small{
+height: 500px;
+}
+
+.box--small2{
+height: 250px;
+}
+
+.box--medium{
+height: 350px;
+
+}
+
+.img-faccion{
+	-moz-box-shadow: .5px .5px .5px #fff; -webkit-box-shadow: .5px .5px .5px #fff; box-shadow: .5px .5px .5px #aaa; 
+}
+.img-faccion:hover{
+	-moz-box-shadow: 0 0 10px #ccc; -webkit-box-shadow: 0 0 10px #ccc; box-shadow: 0 0 10px #ccc;
+}
+
+.box--large{
+height: 380px;
+}
+
+.facciones{
+	background:#e9e8e4 url('../img/bg-grid.png');
+}
+@media screen and (min-width: 31.250em){
+  .box--medium{
+      height: 270px;
+  }
+  .box--large{
+      height: 400px;
+  }
+  .box--small{
+      height: 150px;
+  }
+  .box--small2{
+      height: 200px;
+  }
+}
