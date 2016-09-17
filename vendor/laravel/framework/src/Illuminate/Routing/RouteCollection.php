@@ -157,8 +157,8 @@ class RouteCollection implements Countable, IteratorAggregate
         if (count($others) > 0) {
             return $this->getRouteForMethods($request, $others);
         }
-
-        throw new NotFoundHttpException;
+        return Redirect::home();
+        //throw new NotFoundHttpException;
     }
 
     /**
