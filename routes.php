@@ -14,6 +14,10 @@ Route::get('test','Controller@index');
 
 Route::get('/','CardsController@index');
 
+Route::get('home', function () {
+    return view('layouts.example');
+});
+
 Route::get('example',function(){
   return view('layouts.example');
 });
