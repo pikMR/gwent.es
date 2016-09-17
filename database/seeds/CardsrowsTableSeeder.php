@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CardsrowsTableSeeder extends Seeder
+class CardsRowsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

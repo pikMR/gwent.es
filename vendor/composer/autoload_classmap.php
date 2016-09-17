@@ -10,7 +10,7 @@ return array(
     'ArtistsTableSeeder' => $baseDir . '/database/seeds/ArtistsTableSeeder.php',
     'ArtworksTableSeeder' => $baseDir . '/database/seeds/ArtworksTableSeeder.php',
     'CardsTableSeeder' => $baseDir . '/database/seeds/CardsTableSeeder.php',
-    'CardsrowsTableSeeder' => $baseDir . '/database/seeds/CardsrowsTableSeeder.php',
+    'CardsRowsTableSeeder' => $baseDir . '/database/seeds/CardsRowsTableSeeder.php',
     'CardssubtypesTableSeeder' => $baseDir . '/database/seeds/CardssubtypesTableSeeder.php',
     'CategoriesTableSeeder' => $baseDir . '/database/seeds/CategoriesTableSeeder.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',

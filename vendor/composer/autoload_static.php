@@ -268,7 +268,7 @@ class ComposerStaticInit12f19f44ccfad9fc22bc35233052fcd6
         'ArtistsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ArtistsTableSeeder.php',
         'ArtworksTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ArtworksTableSeeder.php',
         'CardsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CardsTableSeeder.php',
-        'CardsrowsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CardsrowsTableSeeder.php',
+        'CardsRowsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CardsRowsTableSeeder.php',
         'CardssubtypesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CardssubtypesTableSeeder.php',
         'CategoriesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoriesTableSeeder.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',

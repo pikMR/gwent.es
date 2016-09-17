@@ -58,11 +58,11 @@ class CardsController extends Controller
     }
 
     public function row($id){
-    $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards,Cardsrows WHERE Cardsrows.idCard = Cards.idCard and Artworks.idCard = Cards.idCard and Cardsrows.idRow = $id ORDER BY `strength` ASC"));
+    $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards,CardsRows WHERE CardsRows.idCard = Cards.idCard and Artworks.idCard = Cards.idCard and CardsRows.idRow = $id ORDER BY `strength` ASC"));
       return view('artworks.list_data',compact(['data']));
     }
 
-    /*SELECT * FROM Artworks,Cards,Cardsrows WHERE Cardsrows.idCard = Cards.idCard and Artworks.idCard = Cards.idCard and Cardsrows.idRow = 1 ORDER BY `strength` ASC
+    /*SELECT * FROM Artworks,Cards,CardsRows WHERE CardsRows.idCard = Cards.idCard and Artworks.idCard = Cards.idCard and CardsRows.idRow = 1 ORDER BY `strength` ASC
       1 : name/id : melee
       2 : name/id : ranged
       3 : name/id : siege
