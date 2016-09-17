@@ -31,7 +31,7 @@ class CategoriesController extends Controller
 
     public function show_foto($n_categoria){
       $matchThese = ['idCategory' => $n_categoria];
-      $data = DB::select(DB::raw("SELECT * FROM artworks,cards WHERE artworks.idCard = cards.idCard and idCategory=$n_categoria"));
+      $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards WHERE Artworks.idCard = Cards.idCard and idCategory=$n_categoria"));
       return view('artworks/list_data',compact('data'));
     }
 }

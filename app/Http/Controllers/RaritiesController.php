@@ -29,7 +29,7 @@ class RaritiesController extends Controller
 
 
         public function show_foto($idRarity,$n_categoria){
-          $data = DB::select(DB::raw("SELECT * FROM artworks,cards WHERE artworks.idCard = cards.idCard and idRarity=$idRarity and idCategory=$n_categoria"));
+          $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards WHERE Artworks.idCard = Cards.idCard and idRarity=$idRarity and idCategory=$n_categoria"));
           return view('artworks/list_data',compact('data'));
         }
 }
