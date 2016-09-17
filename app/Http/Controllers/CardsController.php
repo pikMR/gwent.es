@@ -34,32 +34,32 @@ class CardsController extends Controller
 
     public function todo(){
       $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards WHERE Artworks.idCard = Cards.idCard and idCategory=1"));
-      return view('Artworks.list_data',compact(['data']));
+      return view('artworks.list_data',compact(['data']));
     }
 
     public function menor(){
       $data = DB::select(DB::raw("SELECT * FROM Cards,Artworks WHERE Artworks.idCard = Cards.idCard and `strength` < 4 ORDER BY `strength` ASC"));
-      return view('Artworks.list_data',compact(['data']));
+      return view('artworks.list_data',compact(['data']));
     }
 
     public function mayor(){
       $data = DB::select(DB::raw("SELECT * FROM Cards,Artworks WHERE Artworks.idCard = Cards.idCard and `strength` > 8 ORDER BY `strength` ASC"));
-      return view('Artworks.list_data',compact(['data']));
+      return view('artworks.list_data',compact(['data']));
     }
 
     public function entre(){
       $data = DB::select(DB::raw("SELECT * FROM Cards,Artworks WHERE Artworks.idCard = Cards.idCard and `strength` BETWEEN 4 AND 8 ORDER BY `strength` ASC"));
-      return view('Artworks.list_data',compact(['data']));
+      return view('artworks.list_data',compact(['data']));
     }
 
     public function type($id){
       $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards WHERE Artworks.idCard = Cards.idCard and `idType` = $id ORDER BY `strength` ASC"));
-      return view('Artworks.list_data',compact(['data']));
+      return view('artworks.list_data',compact(['data']));
     }
 
     public function row($id){
     $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards,Cardsrows WHERE Cardsrows.idCard = Cards.idCard and Artworks.idCard = Cards.idCard and Cardsrows.idRow = $id ORDER BY `strength` ASC"));
-      return view('Artworks.list_data',compact(['data']));
+      return view('artworks.list_data',compact(['data']));
     }
 
     /*SELECT * FROM Artworks,Cards,Cardsrows WHERE Cardsrows.idCard = Cards.idCard and Artworks.idCard = Cards.idCard and Cardsrows.idRow = 1 ORDER BY `strength` ASC
