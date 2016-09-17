@@ -14,6 +14,8 @@ Route::get('test','Controller@index');
 
 Route::get('/','CardsController@index');
 
+Route::get('home','Controller@index');
+
 Route::get('example',function(){
   return view('layouts.example');
 });
