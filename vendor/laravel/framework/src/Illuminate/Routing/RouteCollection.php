@@ -159,7 +159,7 @@ class RouteCollection implements Countable, IteratorAggregate
         if (count($others) > 0) {
             return $this->getRouteForMethods($request, $others);
         }
-        return view('/');
+        return Redirect::action('CardsController@index');
         //throw new NotFoundHttpException;
     }
 
