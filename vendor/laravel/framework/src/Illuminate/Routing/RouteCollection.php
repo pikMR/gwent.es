@@ -5,7 +5,8 @@ namespace Illuminate\Routing;
 use Countable;
 use ArrayIterator;
 use IteratorAggregate;
-use Illuminate\Routing\Redirect;
+
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
