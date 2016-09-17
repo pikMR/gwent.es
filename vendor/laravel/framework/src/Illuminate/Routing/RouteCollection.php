@@ -159,9 +159,8 @@ class RouteCollection implements Countable, IteratorAggregate
         if (count($others) > 0) {
             return $this->getRouteForMethods($request, $others);
         }
-        $array_random = $request->array_random;
-        return Redirect::action('CardsController@index',compact('array_random'));
-        //throw new NotFoundHttpException;
+
+        throw new NotFoundHttpException;
     }
 
     /**

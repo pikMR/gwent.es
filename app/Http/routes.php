@@ -13,6 +13,8 @@
 
 Route::get('/','CardsController@index');
 
+Route::get('home','CardsController@index');
+
 Route::get('example',function(){
   return view('layouts.example');
 });
