@@ -24,7 +24,7 @@ $array_random = session()->all();
   @foreach ($data as $obj)
         <div class='mosaic-block bar'>
 
-            	<a href="http://buildinternet.com/project/mosaic" target="_blank" class="mosaic-overlay">
+            	<a href="#" target="_blank" class="mosaic-overlay">
                 <div class="details">
                   <h5 style='font-family:Cinzel'>{{$obj->name}}</h5>
         					<!--p>$obj->text</p-->
