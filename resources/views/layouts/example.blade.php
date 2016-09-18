@@ -27,14 +27,7 @@
 		</script>
   </head>
   <body>
-    <!--div class="row">
-      <div class="large-4 row">
-        <h1>Welcome to Foundation</h1>
-      </div>
-    </div>
-      generar en EMMET!
-      .row>.small-1*12>{Mens}
-    -->
+
   <div class="row">
     <div class="small-12 columns blanco box box--auto flex-blanco">
     <img src="{{ URL::asset('assets/img/portada.jpg') }}" class="responsive-image">
@@ -48,20 +41,6 @@
             <input type="button" id="btnClick" value="Búsqueda" class="envio small-2"></input>
           </div>
           <div class="small-12 form-cuadros"  >
-            <!--div class="mosaic-block bar">
-              <a href="http://buildinternet.com/project/mosaic" target="_blank" class="mosaic-overlay">
-                <div class="details">
-                  <h4>Mosaic - Sliding Boxes and Captions jQuery Plugin</h4>
-                  <p>by Build Internet</p>
-                </div>
-              </a>
-              <div class="mosaic-backdrop"><img src="http://buildinternet.s3.amazonaws.com/projects/mosaic/mosaic.jpg"/></div>
-            </div-->
-          <!--
-              idType :
-                1 special 2 leader 3 troop 4 character 5 hero
-                6 loyal 7 disloyal
-          -->
           <a href="{{ URL::asset('query/all')}}" class="button round cuadros-up">Todas las Cartas</a>
           <a href="{{ URL::asset('query/type/3') }}" class="button round cuadros-up">Tropas</a>
           <a href="{{ URL::asset('query/less') }}" class="button round cuadros-up"> MENOR de 4 en Defensa </a>
@@ -113,10 +92,6 @@
 
     @section('footer')
 
-
-
-
-
               <h4 class="negro">Disclaimer: The textual information and all images presented through this API about GWENT®: The Witcher Card Game is copyrighted by <strong style='color:red'>CD Projekt RED</strong>.
               </br>The Witcher®, GWENT® are a TM and copyright of <strong style='color:red'>CD PROJEKT</strong> Capital Group. All rights reserved. All art is property of their respective artists and/or <strong style='color:red'>CD PROJEKT</strong> Capital Group. </br>This site is not produced, affiliated or endorsed by <strong style='color:red'>CD PROJEKT Capital Group</strong>.
               </h4>
@@ -126,14 +101,12 @@
                 <div class="menu-text">
                     <iv
                     <div id="enlaces">Sitios Relacionados : <a href="http://gwentify.com/">GWENTIFY</a><span>|</span><a href="http://www.gwentdb.com/">GWENTDB</a><div id="enlaces">
-                <a href="#">PREGUNTANOS</a></div>
+                <a href="https://exo.do/topic/25052/plataforma-gwent-juego-de-cartas-de-the-witcher-3-go-beta">PREGUNTANOS</a></div>
                     </div>
                 <div id="descripcion">This site use <a href="https://gwentapi.com/">https://gwentapi.com/</a> ! :P</div>
               </div>
 
             </div>
-
-
 
 
   <link rel="stylesheet" href="{{ URL::asset('assets/css/foundation.css') }}">
