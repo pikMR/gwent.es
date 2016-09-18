@@ -54,11 +54,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'db647593401.db.1and1.com'),
+            'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'db647593401'),
-            'username' => env('DB_USERNAME', 'dbo647593401'),
-            'password' => env('DB_PASSWORD', 'casiopea003'),
+            'database' => env('DB_DATABASE', 'gwentapi'),
+            'username' => env('DB_USERNAME', 'client'),
+            'password' => env('DB_PASSWORD', 'thereisonlyonekinginthenorth'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
