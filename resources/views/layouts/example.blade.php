@@ -101,7 +101,7 @@
                 <div class="menu-text">
                     <iv
                     <div id="enlaces">Sitios Relacionados : <a href="http://gwentify.com/">GWENTIFY</a><span>|</span><a href="http://www.gwentdb.com/">GWENTDB</a><div id="enlaces">
-                <a href="https://exo.do/topic/25052/plataforma-gwent-juego-de-cartas-de-the-witcher-3-go-beta">PREGUNTANOS</a></div>
+                <a href="https://exo.do/topic/25052/plataforma-gwent-juego-de-cartas-de-the-witcher-3-go-beta">NUESTRA COMUNIDAD</a></div>
                     </div>
                 <div id="descripcion">This site use <a href="https://gwentapi.com/">https://gwentapi.com/</a> ! :P</div>
               </div>
