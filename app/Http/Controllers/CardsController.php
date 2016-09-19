@@ -20,7 +20,7 @@ class CardsController extends Controller
     }
 
     public function index(Request $request){
-
+        /*Cards::getRandom(1,1);*/
         $random1 = DB::select(DB::raw("SELECT * FROM Artworks,Cards WHERE Artworks.idCard = Cards.idCard and idRarity=1 and idCategory=1 ORDER BY RAND() LIMIT 4"));
         $random2 = DB::select(DB::raw("SELECT * FROM Artworks,Cards WHERE Artworks.idCard = Cards.idCard and idRarity=2 and idCategory=1 ORDER BY RAND() LIMIT 4"));
         $random3 = DB::select(DB::raw("SELECT * FROM Artworks,Cards WHERE Artworks.idCard = Cards.idCard and idRarity=3 and idCategory=1 ORDER BY RAND() LIMIT 4"));
@@ -67,9 +67,6 @@ class CardsController extends Controller
       2 : name/id : ranged
       3 : name/id : siege
     */
-    public function hilera($row){
-
-    }
 
 
 }
