@@ -31,13 +31,21 @@ class FactionsController extends Controller
         }
 
         public function show($n_faccion){
+          if(!is_numeric($n_faccion)){
+            return redirect()->away('https://www.exo.do');
+          }
           $facciones = Factions::find($n_faccion);
-          dd($facciones->name);
+
           //Categories::fotos();
           //dd($facciones);
         }
 
         public function show_foto($n_faccion,$n_categoria){
+
+          //($n_faccion,$n_categoria);
+          if(!is_numeric($n_categoria)||!is_numeric($n_faccion)){
+            return redirect()->away('https://www.exo.do');
+          }
           $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards WHERE Artworks.idCard = Cards.idCard and idFaction=$n_faccion and idCategory=$n_categoria"));
           return view('artworks/list_data',compact(['data']));
         }

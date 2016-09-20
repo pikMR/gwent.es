@@ -24,13 +24,20 @@ class CategoriesController extends Controller
     }
 
     public function show($n_categoria){
+      if(!is_numeric($n_categoria)){
+        return redirect()->away('https://www.exo.do');
+      }
       $categoria = Categories::find($n_categoria);
       //Categories::fotos();
       dd($categoria->name);
     }
 
     public function show_foto($n_categoria){
-      $matchThese = ['idCategory' => $n_categoria];
+      /*$matchThese = ['idCategory' => $n_categoria];*/
+      if(!is_numeric($n_categoria)){
+        return redirect()->away('https://www.exo.do');
+      }
+
       $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards WHERE Artworks.idCard = Cards.idCard and idCategory=$n_categoria"));
       return view('artworks/list_data',compact('data'));
     }
