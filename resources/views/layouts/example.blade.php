@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/foundation.css') }}">
+
     <link rel="stylesheet" href="{{ URL::asset('assets/css/app.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Amatic+SC|Bungee|Cinzel|Cinzel+Decorative|Cormorant+SC|Galada|Gloria+Hallelujah|IM+Fell+English+SC|Passion+One|Permanent+Marker|Racing+Sans+One|Rock+Salt" rel="stylesheet">
@@ -110,6 +110,7 @@
 
 	<div id="fusionads"><a target="_blank" href="https://exo.do/topic/25052/plataforma-gwent-juego-de-cartas-de-the-witcher-3-go-beta/6"><img src="{{ URL::asset('assets/img/exodo.jpg') }}"></a><div style="max-width:50px;"><a target="_blank" href="https://exo.do/topic/25052/plataforma-gwent-juego-de-cartas-de-the-witcher-3-go-beta/6">ÚNETE A NUESTRA COMUNIDAD</a></div></div>
 	<!-- ads -->
+  <link rel="stylesheet" href="{{ URL::asset('assets/css/foundation.css') }}">
   <script src="{{ URL::asset('assets/js/fusionad.js') }}"></script>
    <script src="{{ URL::asset('assets/js/vendor/jquery.js') }}"></script>
   <script src="{{ URL::asset('assets/js/vendor/what-input.js') }}"></script>

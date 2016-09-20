@@ -38,9 +38,7 @@ Route::get('facciones/{faccion}','FactionsController@show')->where('faccion','[1
 
 /* FACCIONES & CATEGORIA */
 
-Route::get('facciones/{faccion}/fotos/{categoria}','FactionsController@show_foto')->where(['categoria','[1-3]'],['faccion','[1-5]'],function(){
-}
-);
+Route::get('facciones/{faccion}/fotos/{categoria}','FactionsController@show_foto')->where(['categoria','[1-3]'],['faccion','[1-5]']);
 
 Route::get('query/all','CardsController@todo');
 Route::get('query/less','CardsController@menor');
