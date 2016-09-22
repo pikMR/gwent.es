@@ -1,6 +1,18 @@
+
 @extends('layouts.example')
 @section('title')
-   Facción <?php echo " - " . $data['0']->name; ?>
+
+    <?php
+            if(isset($n_faccion)){
+              echo "FACCIÓN - " . config('options.facciones')[$n_faccion];
+            }
+            if(isset($tipo)){
+              echo "TIPO - " . config('options.tipo')[$tipo];
+            }
+            if(isset($fila)){
+              echo "FILA - " . config('options.fila')[$fila];
+            }
+            ?>
 @stop
 <?php
 $array_random = session()->all();

@@ -101,7 +101,7 @@
 
 .mi-slider nav a:hover,
 .mi-slider nav a.mi-selected {
-	color: #000;
+	color: #FFF;
 }
 
 .mi-slider nav a.mi-selected:after,

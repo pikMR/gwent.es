@@ -284,20 +284,29 @@ height: 350px;
 
 }
 
-.img-faccion{
-	-moz-box-shadow: .5px .5px .5px #fff; -webkit-box-shadow: .5px .5px .5px #fff; box-shadow: .5px .5px .5px #aaa; 
+.img-faccion img:hover,
+.img-faccion img.mi-selected {
+	-moz-box-shadow: 0 0 20px #fff; -webkit-box-shadow: 0 0 20px #fff; box-shadow: 0 0 20px #fff;
 }
-.img-faccion:hover{
-	-moz-box-shadow: 0 0 10px #ccc; -webkit-box-shadow: 0 0 10px #ccc; box-shadow: 0 0 10px #ccc;
-}
+
 
 .box--large{
 height: 380px;
 }
 
 .facciones{
-	background:#e9e8e4 url('../img/bg-grid.png');
+	background:#e9e8e4 url('../img/background-util.jpg');
 }
+
+
+.mosaico{
+	background:#e9e8e4 url('../img/background.jpg');
+	border-color: #333;
+	border-style: groove;
+	border-top: 1px;
+	margin-bottom: 8px;
+}
+
 @media screen and (min-width: 31.250em){
   .box--medium{
       height: 270px;
@@ -318,7 +327,7 @@ height: 380px;
   FUSION ADS
 ============================================================ */
 #fusionads {
- 
+
   position: fixed;
   top: 10px;
   right: 10px;
@@ -354,7 +363,7 @@ height: 380px;
 #fusionads a.fusion-img img {
   display: block;
   margin: 0 0 10px 0;
-  
+
 }
 
 #fusionads a.fusion-poweredby {

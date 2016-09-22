@@ -47,6 +47,6 @@ class FactionsController extends Controller
             return redirect()->away('https://www.exo.do');
           }
           $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards WHERE Artworks.idCard = Cards.idCard and idFaction=$n_faccion and idCategory=$n_categoria"));
-          return view('artworks/list_data',compact(['data']));
+          return view('artworks/list_data',compact(['data','n_faccion']));
         }
 }

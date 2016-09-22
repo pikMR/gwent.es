@@ -26,11 +26,11 @@
       );
 		</script>
   </head>
-  <body>
+  <body class="mosaico">
 
   <div class="row">
-    <div class="small-12 columns blanco box box--auto flex-blanco">
-    <img src="{{ URL::asset('assets/img/portada.jpg') }}" class="responsive-image">
+    <div class="small-12 columns box box--auto flex-blanco">
+    <img src="{{ URL::asset('assets/img/portada3.png') }}" class="responsive-image">
     <div class='columns facciones flex-gris'>
     @yield('content')
     </div>
@@ -59,24 +59,24 @@
         <div class="row separacion-font">
           <div class="small-6 medium-2 columns  box box--auto">
 
-              <a href='{{ URL::asset('facciones/2/fotos/1') }}' target="_self"><div class="img-faccion"><img src={{ URL::asset('assets/img/norte.jpg') }}>
+              <a href='{{ URL::asset('facciones/2/fotos/1') }}' target="_self"><div class="img-faccion"><img title="EL NORTE" src={{ URL::asset('assets/img/norte.jpg') }}>
 
               </div></a>
           </div>
           <div class="small-6 medium-2 columns  box box--auto">
-              <a href='{{ URL::asset('facciones/3/fotos/1') }}' target="_self"><div class="img-faccion"><img src={{ URL::asset('assets/img/scoitall.jpg') }}></div></a>
+              <a href='{{ URL::asset('facciones/3/fotos/1') }}' target="_self"><div class="img-faccion"><img title="SCOIA'TAEL" src={{ URL::asset('assets/img/scoitall.jpg') }}></div></a>
 
           </div>
           <div class="small-6 medium-2 columns  box box--auto">
-            <a href='{{ URL::asset('facciones/5/fotos/1') }}' target="_self"><div class="img-faccion"><img src={{ URL::asset('assets/img/skell.jpg') }}></div></a>
+            <a href='{{ URL::asset('facciones/5/fotos/1') }}' target="_self"><div class="img-faccion"><img title="SKELLIGE" src={{ URL::asset('assets/img/skell.jpg') }}></div></a>
 
           </div>
           <div class="small-6 medium-2 columns  box box--auto">
-            <a href='{{ URL::asset('facciones/4/fotos/1') }}' target="_self"><div class="img-faccion"><img src={{ URL::asset('assets/img/monster.jpg') }}></div></a>
+            <a href='{{ URL::asset('facciones/4/fotos/1') }}' target="_self"><div class="img-faccion"><img title="MOUNSTROS" src={{ URL::asset('assets/img/monster.jpg') }}></div></a>
 
           </div>
           <div class="small-12 medium-2 columns  box box--auto">
-            <a href='{{ URL::asset('facciones/1/fotos/1') }}' target="_self"><div class="img-faccion"><img src={{ URL::asset('assets/img/neutral.png') }}></div></a>
+            <a href='{{ URL::asset('facciones/1/fotos/1') }}' target="_self"><div class="img-faccion"><img title="NEUTRAL" src={{ URL::asset('assets/img/neutral.png') }}></div></a>
           </div>
         </div>
     </div>
@@ -100,7 +100,7 @@
               <div class="menu-foo">
                 <div class="menu-text">
                     <iv
-                    <div id="enlaces">Sitios Relacionados : <a href="http://gwentify.com/">GWENTIFY</a><span>|</span><a href="http://www.gwentdb.com/">GWENTDB</a><div id="enlaces">
+                    <div id="enlaces">Sitios Relacionados :<a target="_blank" href="https://www.playgwent.com/en/">GWENT OFICIAL</a><span>|</span> <a target="_blank" href="http://gwentify.com/">GWENTIFY</a><span>|</span><a target="_blank" href="http://www.gwentdb.com/">GWENTDB</a><div id="enlaces">
                 <a href="https://exo.do/topic/25052/plataforma-gwent-juego-de-cartas-de-the-witcher-3-go-beta">[NUESTRA COMUNIDAD]</a></div>
                     </div>
                 <div id="descripcion">This site use <a href="https://gwentapi.com/">https://gwentapi.com/</a> ! :P</div>

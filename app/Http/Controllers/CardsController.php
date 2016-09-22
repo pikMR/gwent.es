@@ -56,16 +56,18 @@ class CardsController extends Controller
       if(!is_numeric($id)){
         return redirect()->away('https://www.exo.do');
       }
+      $tipo = $id;
       $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards WHERE Artworks.idCard = Cards.idCard and `idType` = $id ORDER BY `strength` ASC"));
-      return view('artworks.list_data',compact(['data']));
+      return view('artworks.list_data',compact(['data','tipo']));
     }
 
     public function row($id){
       if(!is_numeric($id)){
         return redirect()->away('https://www.exo.do');
       }
+    $fila = $id;
     $data = DB::select(DB::raw("SELECT * FROM Artworks,Cards,CardsRows WHERE CardsRows.idCard = Cards.idCard and Artworks.idCard = Cards.idCard and CardsRows.idRow = $id ORDER BY `strength` ASC"));
-      return view('artworks.list_data',compact(['data']));
+      return view('artworks.list_data',compact(['data','fila']));
     }
 
     /*SELECT * FROM Artworks,Cards,CardsRows WHERE CardsRows.idCard = Cards.idCard and Artworks.idCard = Cards.idCard and CardsRows.idRow = 1 ORDER BY `strength` ASC
