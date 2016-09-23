@@ -27,6 +27,21 @@
 	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
 }
 
+
+.mosaic-block-big {
+	float:left;
+	position:relative;
+	overflow:hidden;
+	/*width:1068px;
+	height:1462px;*/
+	width:534px;
+	height:731px;
+	margin:10px;
+	background:#111 url(../img/progress.gif) no-repeat center center;
+	border:1px solid #fff;
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+}
+
 	.mosaic-backdrop {
 		display:none;
 		position:absolute;

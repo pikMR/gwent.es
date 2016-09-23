@@ -4,7 +4,8 @@
 
 				@for($i=0; $i < count($array_random[0]); $i++)
 						<li>
-							<a href="#">
+
+							<a href='{{ URL::asset('card/' .  $array_random[0][$i]->idCard ) }}'>
 									<img src='{{ URL::asset('assets/img/media/' . $array_random[0][$i]->filename) }}' alt="img0{{$i+1}}">
 										<h4>{{$array_random[0][$i]->name}}</h4>
 							</a>

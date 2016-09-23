@@ -31,7 +31,10 @@
   <div class="row">
     <div class="small-12 columns box box--auto flex-blanco">
     <img src="{{ URL::asset('assets/img/portada3.png') }}" class="responsive-image">
+
+
     <div class='columns facciones flex-gris'>
+
     @yield('content')
     </div>
   </div>
@@ -81,7 +84,7 @@
         </div>
     </div>
 
-      @if(isset($array_random))
+      @if(isset($array_random['0']))
         <div class="facciones">
           <h1 class='rojo' style="font-family:'IM Fell English SC';"> Selección Aleatoria </h1>
           <div class="row small-12 separacion-font red">
@@ -98,25 +101,26 @@
 
 
               <div class="menu-foo">
-                <div class="menu-text">
-                    <iv
-                    <div id="enlaces">Sitios Relacionados :<a target="_blank" href="https://www.playgwent.com/en/">GWENT OFICIAL</a><span>|</span> <a target="_blank" href="http://gwentify.com/">GWENTIFY</a><span>|</span><a target="_blank" href="http://www.gwentdb.com/">GWENTDB</a><div id="enlaces">
-                <a href="https://exo.do/topic/25052/plataforma-gwent-juego-de-cartas-de-the-witcher-3-go-beta">[NUESTRA COMUNIDAD]</a></div>
-                    </div>
-                <div id="descripcion">This site use <a href="https://gwentapi.com/">https://gwentapi.com/</a> ! :P</div>
-              </div>
-
+                  <div>
+                    Sitios Relacionados :<a target="_blank" href="https://www.playgwent.com/en/">GWENT OFICIAL</a><span>|</span><a target="_blank" href="http://gwentify.com/">GWENTIFY</a><span>|</span><a target="_blank" href="http://www.gwentdb.com/">GWENTDB</a>
+                  </div>
+                  <div>
+                      <a href="https://exo.do/topic/25052/plataforma-gwent-juego-de-cartas-de-the-witcher-3-go-beta">[NUESTRA COMUNIDAD]</a>
+                  </div>
+                  <div>
+                    This site use <a href="https://gwentapi.com/">https://gwentapi.com/</a> ! :P
+                  </div>
             </div>
 
 	<div id="fusionads"><a target="_blank" href="https://exo.do/topic/25052/plataforma-gwent-juego-de-cartas-de-the-witcher-3-go-beta/6"><img src="{{ URL::asset('assets/img/exodo.jpg') }}"></a><div style="max-width:50px;"><a target="_blank" href="https://exo.do/topic/25052/plataforma-gwent-juego-de-cartas-de-the-witcher-3-go-beta/6">ÚNETE A NUESTRA COMUNIDAD</a></div></div>
 	<!-- ads -->
   <link rel="stylesheet" href="{{ URL::asset('assets/css/foundation.css') }}">
-  <script src="{{ URL::asset('assets/js/fusionad.js') }}"></script>
    <script src="{{ URL::asset('assets/js/vendor/jquery.js') }}"></script>
   <script src="{{ URL::asset('assets/js/vendor/what-input.js') }}"></script>
   <script src="{{ URL::asset('assets/js/vendor/foundation.js') }}"></script>
   <script src="{{ URL::asset('assets/js/app.js') }}"></script>
   <script src="{{ URL::asset('assets/js/jquery.catslider.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/fusionad.js') }}"></script>
     <script>
 			$(function() {
 

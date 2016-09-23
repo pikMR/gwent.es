@@ -65,15 +65,10 @@ p{
 }
 
 
-.menu-foo #enlaces{
-
-}
 .menu-foo span{
 	margin: 0px;
 }
-.menu-foo #descripcion{
-	align-self: flex-end;
-}
+
 .menu-foo a:hover{
 	font-weight: bolder;
 }
@@ -191,6 +186,12 @@ h1{
   justify-content: center;
   color:white;
 }
+.flex-card{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content: center;
+  align-items: center;
+}
 
 .responsive-image{
 background-size: 100% 100%;
@@ -266,7 +267,6 @@ width: 100%;
   border: 5px inerith;
 }
 
-/*@media screen and (min-width: 18.750em){ */
 
 .box--auto{
 height: auto;
@@ -301,9 +301,9 @@ height: 380px;
 
 .mosaico{
 	background:#e9e8e4 url('../img/background.jpg');
-	border-color: #333;
+/*	border-color: #333;
 	border-style: groove;
-	border-top: 1px;
+	border-top: 1px;*/
 	margin-bottom: 8px;
 }
 

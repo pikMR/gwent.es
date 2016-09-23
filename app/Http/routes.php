@@ -47,8 +47,9 @@ Route::get('query/higher','CardsController@mayor');
 Route::get('query/type/{id}','CardsController@type')->where('id','[1-7]');
 Route::get('query/row/{id}','CardsController@row')->where('id','[1-3]');
 
+Route::get('card/{id}','CardsController@verCarta')->where('id','[0-9]+');
 
-
+/*Route::get('card/{nombre}','CardsController@verNombre')->where('nombre','[a-z]+');*/
 /*'faccion','[1-5]')->and('categoria','[1-3]');
 Route::post('query/all/{array_random}',['as'=>'query/all','uses'=>'CardsController@todo']);
 */
